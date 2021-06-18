@@ -116,6 +116,20 @@ def transformer_params(patterns, param_overrides):
 
   return hparams
 
+@registry.register("patent_app")
+def patent_app(param_overrides):
+    return transformer_params(
+            {
+                "train_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
+                "dev_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/val_10k.tfrecords",
+                "test_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/val_10k.tfrecords",
+                "max_input_len": 600,
+                "max_output_len": 200,
+                "train_steps": 2000,
+                "learning_rate": 0.0001,
+                "batch_size": 2,
+                }, param_overrides)
+
 
 @registry.register("cnn_dailymail_transformer")
 def cnn_dailymail(param_overrides):
