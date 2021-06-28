@@ -123,11 +123,11 @@ def patent_app(param_overrides):
                 "train_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
                 "dev_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/val_10k.tfrecords",
                 "test_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/val_10k.tfrecords",
-                "max_input_len": 600,
-                "max_output_len": 200,
-                "train_steps": 2000,
+                "max_input_len": 400,
+                "max_output_len": 100,
+                "train_steps": 31747,
                 "learning_rate": 0.0001,
-                "batch_size": 2,
+                "batch_size": 8,
                 }, param_overrides)
 
 
