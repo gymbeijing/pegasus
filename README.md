@@ -3,7 +3,7 @@ Below is the original README.md file from google-research. To run the model on o
 "tfrecord:/path/to/your/dataset",
 e.g. "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
 ```
-You can use tfrecord_prep.ipynb to convert the dataset to a tfrecord dataset.
+You can use tfrecord_prep.ipynb to convert the CMUMine dataset to a tfrecord dataset.
 
 Another thing you would do is to create a folder to store checkpoints downloaded from the google cloud (descriptions in the below). For example, you could create a folder named ckpt/pegasus_ckpt and put the downloaded checkpoint model.ckpt-1500000 into it. When you run the model according to the author's direction, you will specify the address of this folder.
 ```
