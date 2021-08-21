@@ -12,6 +12,12 @@ ckpt/pegasus_ckpt/model.ckpt-1500000
 
 And then follow this steps wrote by the authors as the following to run the model:
 
+To train the model, a quick example command would be:
+```
+python3 train.py --params=patent_app --param_overrides=vocab_filename=ckpt/c4.unigram.newline.10pct.96000.model --train_init_checkpoint=ckpt/model.ckpt-1500000 --model_dir=ckpt/patent_app --keep_checkpoint_max=2
+```
+For detailed explanations, please refer to the content below:
+
 ---
 
 # PEGASUS library
