@@ -16,6 +16,11 @@ To train the model, a quick example command would be:
 ```
 python3 train.py --params=patent_app --param_overrides=vocab_filename=ckpt/c4.unigram.newline.10pct.96000.model --train_init_checkpoint=ckpt/model.ckpt-1500000 --model_dir=ckpt/patent_app --keep_checkpoint_max=2
 ```
+
+To evaluate the model, a quick example command would be:
+```
+python3 evaluate.py --params=patent_app --param_overrides=vocab_filename=ckpt/c4.unigram.newline.10pct.96000.model,batch_size=1,beam_size=5,beam_alpha=0.6 --model_dir=ckpt/patent_app/model.ckpt-2000 --full=True
+```
 For detailed explanations, please refer to the content below:
 
 ---
