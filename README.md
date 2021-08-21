@@ -5,9 +5,9 @@ e.g. "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords
 ```
 You can use tfrecord_prep.ipynb to convert the CMUMine dataset to a tfrecord dataset.
 
-Another thing you would do is to create a folder to store checkpoints downloaded from the google cloud (descriptions in the below). For example, you could create a folder named ckpt/pegasus_ckpt and put the downloaded checkpoint model.ckpt-1500000 into it. When you run the model according to the author's direction, you will specify the address of this folder.
+Another thing you would do is to create a folder to store checkpoints downloaded from the google cloud (descriptions in the below). For example, you could create a folder named ckpt/ and put the downloaded checkpoint model.ckpt-1500000 into it. When you run the model according to the author's direction, you will specify the address of this folder.
 ```
-ckpt/pegasus_ckpt/model.ckpt-1500000
+ckpt/model.ckpt-1500000
 ```
 
 And then follow this steps wrote by the authors as the following to run the model:
