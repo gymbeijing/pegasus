@@ -1,7 +1,7 @@
 Below is the original README.md file from google-research. To run the model on our CMUMine dataset, you need to put our tfrecord dataset under /path/to/your/dataset, and then change the path in public_params.py as follows:
 ```
 "tfrecord:/path/to/your/dataset",
-"tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
+e.g. "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
 ```
 You can use tfrecord_prep.ipynb to convert the dataset to a tfrecord dataset
 
