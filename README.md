@@ -1,3 +1,6 @@
+# Below is the original README.md file from google-research. To run the model on our CMUMine dataset, you need to put our dataset to the directory, and then follow this steps wrote by the authors as the following:
+------------------------------------
+
 # PEGASUS library
 
 Pre-training with Extracted Gap-sentences for Abstractive SUmmarization
