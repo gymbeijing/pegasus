@@ -1,4 +1,4 @@
-Below is the original README.md file from google-research. To run the model on our CMUMine dataset, you need to put our tfrecord dataset under /path/to/your/dataset, and then change the path in public_params.py as follows:
+To run the model on our CMUMine dataset, you need to put our tfrecord dataset under /path/to/your/dataset, and then change the path in public_params.py as follows:
 ```
 "tfrecord:/path/to/your/dataset",
 e.g. "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
@@ -22,6 +22,7 @@ To evaluate the model, a quick example command would be:
 python3 evaluate.py --params=patent_app --param_overrides=vocab_filename=ckpt/c4.unigram.newline.10pct.96000.model,batch_size=1,beam_size=5,beam_alpha=0.6 --model_dir=ckpt/patent_app/model.ckpt-2000 --full=True
 ```
 For detailed explanations, please refer to the content below:
+Below is the original README.md file from google-research. 
 
 ---
 
