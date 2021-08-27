@@ -5,7 +5,23 @@ e.g. "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords
 ```
 You can use tfrecord_prep.ipynb to convert the CMUMine dataset to a tfrecord dataset.
 
-And then you would register your custom dataset in public_params.py. You can refer to the existing example to register your custom dataset.
+And then you would register your custom dataset in ```pegasus/params/public_params.py```. You can refer to the existing example to register your custom dataset. For example, if you add this chunk of code to the ```public_params.py``` file, you can ask the model to run on your dataset called "patent_app" later.
+
+```
+@registry.register("patent_app")
+def patent_app(param_overrides):
+    return transformer_params(
+            {
+                "train_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/train_10k.tfrecords",
+                "dev_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/val_10k.tfrecords",
+                "test_pattern": "tfrecord:/home/ubuntu/IP/pegasus/pegasus/data/testdata/val_10k.tfrecords",
+                "max_input_len": 400,
+                "max_output_len": 100,
+                "train_steps": 31747,
+                "learning_rate": 0.0001,
+                "batch_size": 8,
+                }, param_overrides)
+```
 
 Another thing you would do is to create a folder to store checkpoints downloaded from the google cloud (descriptions in the below). For example, you could create a folder named ckpt/ and put the downloaded checkpoint model.ckpt-1500000 into it. When you run the model according to the author's direction, you will specify the address of this folder.
 ```
